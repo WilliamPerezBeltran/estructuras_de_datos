@@ -20,11 +20,19 @@ este ordenamiento no estan eficiente pero es bueno para estudiarlo
 # lista = [44,42,56,86,52,17]
 lista = [4,2,6,8,5,7]
 
-for i in range(len(lista)):
+print("array para ordenar = %s"%(str(lista)) )
 
+def swap(mayor, menor):
+	pivote = mayor
+	lista[x] = menor
+	lista[x+1] = pivote
+
+for i in range(len(lista)):
 	for x in range(len(lista)-1):
 		if lista[x] > lista[x+1]:
-			pivote = lista[x]
-			lista[x] = lista[x+1]
-			lista[x+1] = pivote
+			swap(lista[x],lista[x+1])
 			print(lista)
+
+
+print("array ordenado = %s"%(str(lista)) )
+
